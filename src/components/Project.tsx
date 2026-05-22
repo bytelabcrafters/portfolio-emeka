@@ -7,64 +7,64 @@ import mock05 from '../assets/images/mock05.png';
 import mock06 from '../assets/images/mock06.png';
 import mock07 from '../assets/images/mock07.png';
 import mock08 from '../assets/images/mock08.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
 import '../assets/styles/Project.scss';
 
 function Project() {
     return(
     <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
+        <h1>Featured Work</h1>
+        <p className="projects-intro">
+            A selection of production systems I designed, built, and shipped across contact center, healthcare,
+            and workload automation domains. Most live behind enterprise SSO, so links aren't public — happy to
+            walk through architecture and code in a conversation.
+        </p>
         <div className="projects-grid">
             <div className="project">
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.</p>
+                <img src={mock01} className="zoom" alt="Multi-tenant contact center platform" width="100%"/>
+                <h2>Multi-Tenant Contact Center Platform</h2>
+                <p>Architected 45 stateless Node.js/TypeScript microservices on GCP handling 1,200 req/s with p95 under 180&nbsp;ms. Shipped an Angular Chrome extension with lazy-loading and tree-shaking that cut the initial bundle from 1.8&nbsp;MB to 950&nbsp;KB and improved Time-to-Interactive by 38%.</p>
             </div>
             <div className="project">
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><h2>High Speed Chase</h2></a>
-                <p>Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. This is available on Itch.io for gamers worldwide to enjoy.</p>
+                <img src={mock02} className="zoom" alt="Adaptive media routing API" width="100%"/>
+                <h2>Adaptive Media Routing API</h2>
+                <p>Built an Express.js + GraphQL gateway that aggregates conversation transcripts from MongoDB, Elasticsearch, and Firebase behind unified pagination, cutting average query response from 420&nbsp;ms to 160&nbsp;ms across 30&nbsp;GB datasets. Added a Java DeepSpeech transcription enrichment service with sub-second searchability over 30M records.</p>
             </div>
             <div className="project">
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><h2>Astro Raiders</h2></a>
-                <p>Developed and released a 2D shooting game with C# and Unity. This project is hosted on the Itch.io public marketplace.</p>
+                <img src={mock03} className="zoom" alt="CTI integration with Salesforce" width="100%"/>
+                <h2>Salesforce CTI & Telephony Bridge</h2>
+                <p>Integrated SIP-over-WebSocket telephony events with a .NET Core facade in front of a legacy ASP.NET connector, cutting call setup latency by 170&nbsp;ms and enabling omnichannel dashboards inside CRM iframes. Packaged the Angular agent app as an Electron desktop client with an S3 signed-URL auto-update pipeline serving 4,000 agents.</p>
             </div>
             <div className="project">
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><h2>Datum: Integrated Learning Platform</h2></a>
-                <p>This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails.</p>
+                <img src={mock04} className="zoom" alt="Patient engagement portal" width="100%"/>
+                <h2>Patient Engagement Portal (HIPAA)</h2>
+                <p>Built an Angular 7 + Node.js/Express portal for 500,000 active patients with Firebase Cloud Messaging push notifications. Migrated MySQL to a sharded MongoDB cluster on AWS EKS, redesigning the schema to drop 95th-percentile response time from 900&nbsp;ms to 280&nbsp;ms and passing an external HIPAA audit with zero major findings.</p>
             </div>
             <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>WeManage: Real Estate Asset Management</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
+                <img src={mock05} className="zoom" alt="Telemedicine module" width="100%"/>
+                <h2>WebRTC Telemedicine Module</h2>
+                <p>Shipped a secure video telemedicine module with a Java/Spring backend and WebRTC + SIP signaling, sustaining 7,000 simultaneous sessions and writing call records back to CRM via REST. Hardened the platform with a Mocha + Cypress suite that lifted coverage from 52% to 85% and caught a session-storage memory leak before rollout.</p>
             </div>
             <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>COVID-19 Case Management</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
+                <img src={mock06} className="zoom" alt="Workload automation dashboard" width="100%"/>
+                <h2>Workload Automation Dashboard</h2>
+                <p>Built an AngularJS + Java servlet dashboard for ops staff to visualize and re-run 5,000+ nightly batch tasks, then ported cron workflows to Node.js + Redis pipelines processing 1.2M tasks daily with at-least-once delivery and back-pressure. Codified AWS VPCs, security groups, and ELBs with early Terraform, cutting sandbox setup from two days to two hours.</p>
+            </div>
+        </div>
+
+        <h2 className="projects-subheading">Open Source & Side Projects</h2>
+        <p className="projects-intro">
+            Smaller experiments and learning projects hosted on GitHub.
+        </p>
+        <div className="projects-grid">
+            <div className="project">
+                <a href="https://github.com/galaxyb-dark/multi-reg-analysis" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="Multiple regression property analysis thumbnail" width="100%"/></a>
+                <a href="https://github.com/galaxyb-dark/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
+                <p>Analyzed a real estate dataset and predicted property prices using statistical methods such as OLS and multi-regression analysis. Built in Python with Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
             </div>
             <div className="project">
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
-                <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
-            </div>
-            <div className="project">
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
-                <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>
-            </div>
-            <div className="project">
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
-                <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
+                <a href="https://github.com/galaxyb-dark/submeowrine" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="Submeowrine mobile game thumbnail" width="100%"/></a>
+                <a href="https://github.com/galaxyb-dark/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
+                <p>An Android mobile application built with Java and Android Studio that runs a 2D shooting game.</p>
             </div>
         </div>
     </div>

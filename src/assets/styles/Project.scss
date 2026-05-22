@@ -4,7 +4,20 @@
     padding: 5% 10%;
     text-align: left;
 }
-  
+
+.projects-container .projects-intro {
+    max-width: 900px;
+    margin: 0 0 40px;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.projects-container .projects-subheading {
+    margin-top: 70px;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
 .projects-container .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

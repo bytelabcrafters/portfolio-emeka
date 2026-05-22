@@ -1,86 +1,78 @@
-# Developer Portfolio Template 🚀
+# Emeka Abanifi · Portfolio
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Node.js](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-## What is this?
+The source code for [emekaabanifi.dev](#) — the personal portfolio of **Emeka Abanifi**, a senior full stack software engineer in Atlanta, GA with 14 years of experience designing and shipping multi-tenant SaaS products for contact-center, healthcare, and workload-automation domains.
 
-This simple portfolio template is designed to showcase your past projects, career history, skill sets, and more.
+- **Stack:** TypeScript, JavaScript, Angular, React, Node.js, .NET Core, Java, Python
+- **Cloud & DevOps:** GCP, AWS, Azure, Docker, Kubernetes, Terraform
+- **Data:** MongoDB, PostgreSQL, Elasticsearch, Redis, Firebase, MySQL
 
-View the [Demo](https://yujisatojr.github.io/react-portfolio-template/).
+## Contact
 
-**This template is free to use, and no attribution is required.** You can fork or download this repository to customize it for your own use. Please don't forget to leave a ⭐ if you like this portfolio!
+- Email: [byteharborhq@gmail.com](mailto:byteharborhq@gmail.com)
+- Location: Atlanta, GA
 
-![screenshot](./src/assets//images/screenshot.png)
+## Local development
 
-## Features
+1. Install [Node.js](https://nodejs.org/) (LTS recommended).
 
-✅ Open source (free to use, no attribution required)  
-✅ Responsive design & mobile-friendly  
-✅ Supports both dark and light modes  
-✅ Highly customizable multi-component layout  
-✅ Built with modern technologies (React, TypeScript, JavaScript, and SCSS)  
+   ```bash
+   node -v
+   ```
 
-## Quick Setup
+2. Install dependencies:
 
-1. Ensure you have [Node.js](https://nodejs.org/) installed. Check your installation by running:
+   ```bash
+   npm install
+   ```
 
-    ```bash
-    node -v
-    ```
+3. Start the dev server:
 
-2. In the project directory, install dependencies:
+   ```bash
+   npm start
+   ```
 
-    ```bash
-    npm install
-    ```
+   The site is served at [http://localhost:3000](http://localhost:3000) and reloads on file changes.
 
-3. Start the development server:
+4. Run the test suite:
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm test
+   ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
+5. Produce a production build:
 
-5. Customize the template by navigating to the `/src/components` directory. Modify texts, pictures, and other information as needed.
+   ```bash
+   npm run build
+   ```
 
-The page will reload if you make edits, and you will see any lint errors in the console.
+   The optimized bundle is emitted to `build/`.
 
-If you are interested in creating a mockup image like the ones from the personal projects section, I recommend [Genmoo](https://gemoo.com/tools/browser-mockup-generator/). This website lets you generate sleek looking browser mockups for free.
+## Project layout
+
+```
+src/
+  App.tsx              # Root component, theme toggle
+  components/
+    Navigation.tsx     # Sticky top bar with dark/light toggle
+    Main.tsx           # Hero section (name, title, socials)
+    Expertise.tsx      # Frontend / Backend / Cloud expertise cards
+    Timeline.tsx       # Career history + education
+    Project.tsx        # Featured production work
+    Contact.tsx        # Contact form and direct links
+    Footer.tsx         # Socials + signature
+  assets/
+    images/            # Mockups and backgrounds
+    styles/            # SCSS modules per component
+```
 
 ## Deployment
 
-You can choose your preferred service (e.g., [Netlify](https://www.netlify.com/), [Render](https://render.com/), [Heroku](https://www.heroku.com/)) for deployment. One of the easiest ways to host this portfolio is using GitHub Pages. Follow the instructions below for a production deploy.
+The site is a static Create React App build, so any static host works (Netlify, Vercel, Render, GitHub Pages, S3/CloudFront, etc.).
 
-1. **Set Up GitHub Repository**
+For GitHub Pages, set `homepage` in `package.json` to your deployment URL and run:
 
-    Create a new repository on GitHub for your portfolio app.
-
-2. **Configure `package.json`**
-
-    Edit the following properties in your `package.json` file:
-
-    ```json
-    {
-        "homepage": "https://yourusername.github.io/your-repo-name",
-        "scripts": {
-            "predeploy": "npm run build",
-            "deploy": "gh-pages -d build",
-            ...
-        }
-    }
-    ```
-
-    Replace `yourusername` with your GitHub username and `your-repo-name` with the name of your GitHub repository.
-
-3. **Deploy to GitHub Pages**
-
-    Run the following command to deploy your app:
-
-    ```bash
-    npm run deploy
-    ```
-
-4. **Access Your Deployed App**
-
-    After successfully deploying, you can access your app at `https://yourusername.github.io/your-repo-name`.
+```bash
+npm run deploy
+```
